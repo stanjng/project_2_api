@@ -13,3 +13,5 @@ curl "http://localhost:4741/change-password" \
   }'
 
 echo
+
+# TOKEN=BAhJIiVlNWY5Mzg4NGQwMTBlYjljYWE0ODEzYjFiNjRhMDExMgY6BkVG--c3d512c7dc03d0e0a75db57795db4a7ab186d707 EMAIL=s@j.com PASSWORD=sj sh curl-scripts/auth/change-password.sh
