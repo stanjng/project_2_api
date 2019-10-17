@@ -1,9 +1,9 @@
-class SmoothiesController < ApplicationController
+class SmoothiesController < ProtectedController
   before_action :set_smoothy, only: [:show, :update, :destroy]
 
   # GET /smoothies
   def index
-    @smoothies = Smoothie.all
+    @smoothies = current_user.smoothies
 
     render json: @smoothies
   end
@@ -15,7 +15,7 @@ class SmoothiesController < ApplicationController
 
   # POST /smoothies
   def create
-    @smoothy = Smoothie.new(smoothy_params)
+    @smoothy = current_user.smoothies.build(smoothy_params)
 
     if @smoothy.save
       render json: @smoothy, status: :created, location: @smoothy
@@ -41,7 +41,7 @@ class SmoothiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_smoothy
-      @smoothy = Smoothie.find(params[:id])
+      @smoothy = current_user.smoothies.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
