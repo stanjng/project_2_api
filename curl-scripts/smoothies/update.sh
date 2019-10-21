@@ -13,7 +13,6 @@ curl "http://localhost:4741/smoothies/${ID}" \
         "fruit": "'"${FRUIT}"'",
         "vegetable": "'"${VEGETABLE}"'",
         "thickener": "'"${THICKENER}"'",
-        "description": "'"${DESCRIPTION}"'",
         "user_id": "'"${USER}"'"
     }
   }'

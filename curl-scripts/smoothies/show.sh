@@ -6,4 +6,4 @@ curl "http://localhost:4741/smoothies/${ID}" \
 
 echo
 
-# ID=4 TOKEN="BAhJIiUzZWMwMGZhNzNiNjZlMTAzYjQ0MDE0ZTA2ZjhmZWVjMQY6BkVG--a4e084fe6e4a25eaf51a10e803aeed964bd590d8" sh curl-scripts/smoothies/show.sh
+# ID=4 TOKEN="BAhJIiU1NTNhM2Q3NzI3OTY4Y2E0OGFjOWMyZDg1OGE4NzUwZAY6BkVG--82e539d7b9bd7954b3ee4e18beedce0047a80a64" sh curl-scripts/smoothies/show.sh

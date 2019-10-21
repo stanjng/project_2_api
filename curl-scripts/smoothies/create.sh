@@ -13,11 +13,10 @@ curl "http://localhost:4741/smoothies" \
       "fruit": "'"${FRUIT}"'",
       "vegetable": "'"${VEGETABLE}"'",
       "thickener": "'"${THICKENER}"'",
-      "description": "'"${DESCRIPTION}"'",
       "user_id": "'"${USER}"'"
     }
   }'
 
 echo
 
-# TOKEN="BAhJIiUzZWMwMGZhNzNiNjZlMTAzYjQ0MDE0ZTA2ZjhmZWVjMQY6BkVG--a4e084fe6e4a25eaf51a10e803aeed964bd590d8" NAME='Mocha Choca' BASE='Chocolate Soy Milk, Coffee' BOOSTER='Spirulina Powder, Chocolate Protein' FRUIT='n/a' VEGETABLE='Kale' THICKENER='Oats' DESCRIPTION='Strawberry and banana goodness!' USER=1 sh curl-scripts/smoothies/create.sh
+# TOKEN="BAhJIiU1NTNhM2Q3NzI3OTY4Y2E0OGFjOWMyZDg1OGE4NzUwZAY6BkVG--82e539d7b9bd7954b3ee4e18beedce0047a80a64" NAME='Mocha Choca' BASE='Chocolate Soy Milk, Coffee' BOOSTER='Spirulina Powder, Chocolate Protein' FRUIT='n/a' VEGETABLE='Kale' THICKENER='Oats' USER=1 sh curl-scripts/smoothies/create.sh

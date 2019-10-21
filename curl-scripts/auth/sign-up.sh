@@ -14,8 +14,5 @@ curl "http://localhost:4741/sign-up" \
 
 echo
 
-<<<<<<< HEAD
 # EMAIL=s@j.com PASSWORD=sj sh curl-scripts/auth/sign-up.sh
-=======
 # EMAIL=s@j.com PASSWORD=sj PASSWORD=sj sh curl-scripts/auth/sign-up.sh
->>>>>>> gen-smoothies

@@ -7,7 +7,6 @@ class CreateSmoothies < ActiveRecord::Migration[5.2]
       t.string :fruit
       t.string :vegetable
       t.string :thickener
-      t.string :description
       t.references :user, foreign_key: true
 
       t.timestamps

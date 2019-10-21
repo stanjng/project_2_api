@@ -26,7 +26,7 @@ require 'rails_helper'
 RSpec.describe SmoothiesController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
-  # Smoothie. As you add validations to Smoothie, be sure to
+  # Smoothy. As you add validations to Smoothy, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
@@ -43,7 +43,7 @@ RSpec.describe SmoothiesController, type: :controller do
 
   describe "GET #index" do
     it "returns a success response" do
-      smoothie = Smoothie.create! valid_attributes
+      smoothy = Smoothy.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_success
     end
@@ -51,33 +51,33 @@ RSpec.describe SmoothiesController, type: :controller do
 
   describe "GET #show" do
     it "returns a success response" do
-      smoothie = Smoothie.create! valid_attributes
-      get :show, params: {id: smoothie.to_param}, session: valid_session
+      smoothy = Smoothy.create! valid_attributes
+      get :show, params: {id: smoothy.to_param}, session: valid_session
       expect(response).to be_success
     end
   end
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Smoothie" do
+      it "creates a new Smoothy" do
         expect {
-          post :create, params: {smoothie: valid_attributes}, session: valid_session
-        }.to change(Smoothie, :count).by(1)
+          post :create, params: {smoothy: valid_attributes}, session: valid_session
+        }.to change(Smoothy, :count).by(1)
       end
 
-      it "renders a JSON response with the new smoothie" do
+      it "renders a JSON response with the new smoothy" do
 
-        post :create, params: {smoothie: valid_attributes}, session: valid_session
+        post :create, params: {smoothy: valid_attributes}, session: valid_session
         expect(response).to have_http_status(:created)
         expect(response.content_type).to eq('application/json')
-        expect(response.location).to eq(smoothie_url(Smoothie.last))
+        expect(response.location).to eq(smoothy_url(Smoothy.last))
       end
     end
 
     context "with invalid params" do
-      it "renders a JSON response with errors for the new smoothie" do
+      it "renders a JSON response with errors for the new smoothy" do
 
-        post :create, params: {smoothie: invalid_attributes}, session: valid_session
+        post :create, params: {smoothy: invalid_attributes}, session: valid_session
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.content_type).to eq('application/json')
       end
@@ -90,27 +90,27 @@ RSpec.describe SmoothiesController, type: :controller do
         skip("Add a hash of attributes valid for your model")
       }
 
-      it "updates the requested smoothie" do
-        smoothie = Smoothie.create! valid_attributes
-        put :update, params: {id: smoothie.to_param, smoothie: new_attributes}, session: valid_session
-        smoothie.reload
+      it "updates the requested smoothy" do
+        smoothy = Smoothy.create! valid_attributes
+        put :update, params: {id: smoothy.to_param, smoothy: new_attributes}, session: valid_session
+        smoothy.reload
         skip("Add assertions for updated state")
       end
 
-      it "renders a JSON response with the smoothie" do
-        smoothie = Smoothie.create! valid_attributes
+      it "renders a JSON response with the smoothy" do
+        smoothy = Smoothy.create! valid_attributes
 
-        put :update, params: {id: smoothie.to_param, smoothie: valid_attributes}, session: valid_session
+        put :update, params: {id: smoothy.to_param, smoothy: valid_attributes}, session: valid_session
         expect(response).to have_http_status(:ok)
         expect(response.content_type).to eq('application/json')
       end
     end
 
     context "with invalid params" do
-      it "renders a JSON response with errors for the smoothie" do
-        smoothie = Smoothie.create! valid_attributes
+      it "renders a JSON response with errors for the smoothy" do
+        smoothy = Smoothy.create! valid_attributes
 
-        put :update, params: {id: smoothie.to_param, smoothie: invalid_attributes}, session: valid_session
+        put :update, params: {id: smoothy.to_param, smoothy: invalid_attributes}, session: valid_session
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.content_type).to eq('application/json')
       end
@@ -118,11 +118,11 @@ RSpec.describe SmoothiesController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested smoothie" do
-      smoothie = Smoothie.create! valid_attributes
+    it "destroys the requested smoothy" do
+      smoothy = Smoothy.create! valid_attributes
       expect {
-        delete :destroy, params: {id: smoothie.to_param}, session: valid_session
-      }.to change(Smoothie, :count).by(-1)
+        delete :destroy, params: {id: smoothy.to_param}, session: valid_session
+      }.to change(Smoothy, :count).by(-1)
     end
   end
 
