@@ -5,7 +5,7 @@ Smoothies are delicious and nutricious way to obtain the daily necessary vitamin
 
 ## Back End
 [Deployed API](https://damp-refuge-43009.herokuapp.com/)
-[Repository](https://stanjng.github.io/project_2_api/)
+[Repository](https://github.com/stanjng/project_2_api)
 
 ## List of Technologies
 - Ruby on Rails
